@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<HBox fx:id="div_main" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+   fx:controller="SplashController" spacing="0" fillHeight="true" prefWidth="600" style= "-fx-background-color:#FFFFFF">
+    <children>
+        <VBox fx:id="div_main_left" alignment="CENTER" spacing="0" HBox.hgrow="ALWAYS" prefWidth="${div_main.width/2}">
+            <ImageView fitWidth="${div_main.width/2}" preserveRatio="true" pickOnBounds="true">
+                <image>
+                    <Image url="@whisky-white.png"/>
+                </image>
+            </ImageView>
+        </VBox>
+        <VBox fx:id="div_main_right" alignment="CENTER" spacing="20" HBox.hgrow="ALWAYS" prefWidth="${div_main.width/2}"
+            style=" -fx-border-color: #D5B151EE; -fx-border-width: 0px;">
+            <Label text="BREWiQ" style="-fx-font-family: '000webfont'; -fx-font-size: 80px; -fx-font-weight: 700; -fx-text-fill: #323232;"/>
+            <Label text=" " style="-fx-font-family: '000webfont'; -fx-font-size: 36px; -fx-font-weight: 700; -fx-text-fill: #323232;"/>
+            <Label fx:id="label_main_title" text="You must be 21 to view &#10;and use this app" style="-fx-font-family: '000webfont'; -fx-font-size: 40px; -fx-font-weight: 700; -fx-text-fill: #323232;"/>
+            <Label text=" " style="-fx-font-size: 18px; -fx-font-weight: 700; -fx-text-fill: #323232;"/>
+            <Button text="I'm over 21" onAction='#navToCategories' style="-fx-font-family: '000webfont'; -fx-font-size: 28px; -fx-font-weight: 700; -fx-background-color:#323232; -fx-text-fill: #FFFFFF; -fx-border-color: #D5B151EE; -fx-border-width: 0px; -fx-pref-width: 250; -fx-border-radius: 10; -fx-cursor: hand;"/>
+            <Button text="I'm under 21" onAction="#closeApp" style="-fx-font-family: '000webfont'; -fx-font-size: 28px; -fx-font-weight: 700; -fx-background-color:#FFFFFF; -fx-text-fill: #323232; -fx-border-color: #323232; -fx-border-width: 2px; -fx-pref-width: 250; -fx-border-radius: 2; -fx-cursor: hand;"/>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+</HBox>

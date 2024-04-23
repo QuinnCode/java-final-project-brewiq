@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+
+<VBox fx:id="div_main" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+    fx:controller="CategoriesController" spacing="0" fillWidth="true" prefWidth="600" style= "-fx-background-color:#FFFFFF">
+    <children>
+        <HBox fx:id="div_toolbar" alignment="CENTER_LEFT" spacing="0" fillHeight="false" prefHeight="80" prefWidth="600" style= "-fx-background-color:#FFFFFF; -fx-border-width: 0px 0px 2px 0px; -fx-padding: 0 0 10px 0; -fx-border-color: #323232;">
+            <children>
+                <Label text="BREWiQ" style="-fx-font-family: '000webfont'; -fx-font-size: 60px; -fx-font-weight: 700; -fx-text-fill: #323232;"/>
+                 <Pane HBox.hgrow="ALWAYS"/>
+                <Button fx:id="beer" text="beer" onAction="#setSelected" onMouseEntered="#onHover" onMouseExited="#onExit" style="-fx-font-family: '000webfont'; -fx-font-size: 36px; -fx-font-weight: 700; -fx-background-color:#FFFFFF; -fx-text-fill: #3232EE; -fx-border-color: #323232; -fx-border-width: 0px; -fx-border-radius: 2; -fx-cursor: hand;"/>
+                <Button fx:id="wine" text="wine" onAction="#setSelected" onMouseEntered="#onHover" onMouseExited="#onExit" style="-fx-font-family: '000webfont'; -fx-font-size: 36px; -fx-font-weight: 700; -fx-background-color:#FFFFFF; -fx-text-fill: #323232; -fx-border-color: #323232; -fx-border-width: 0px; -fx-border-radius: 2; -fx-cursor: hand;"/>
+                <Button fx:id="cider" text="cider" onAction="#setSelected" onMouseEntered="#onHover" onMouseExited="#onExit" style="-fx-font-family: '000webfont'; -fx-font-size: 36px; -fx-font-weight: 700; -fx-background-color:#FFFFFF; -fx-text-fill: #323232; -fx-border-color: #323232; -fx-border-width: 0px; -fx-border-radius: 2; -fx-cursor: hand;"/>
+                <Button fx:id="cocktail" text="cocktail" onAction="#setSelected" onMouseEntered="#onHover" onMouseExited="#onExit" style="-fx-font-family: '000webfont'; -fx-font-size: 36px; -fx-font-weight: 700; -fx-background-color:#FFFFFF; -fx-text-fill: #323232; -fx-border-color: #323232; -fx-border-width: 0px; -fx-border-radius: 2; -fx-cursor: hand;"/>
+            </children>
+        </HBox>
+        <HBox fx:id="div_main_content" alignment="CENTER" spacing="0" fillHeight="true" prefHeight="520" prefWidth="600" style= "-fx-background-color:#FFFFFF">
+            <children>
+                <VBox fx:id="div_main_right" alignment="CENTER" spacing="20" HBox.hgrow="ALWAYS" prefWidth="${div_main_content.width/2}"
+                    style=" -fx-border-color: #D5B151EE; -fx-border-width: 0px; -fx-padding: 40px 0 0 0;">
+                    <ListView fx:id="categoryList" VBox.vgrow="ALWAYS" style="-fx-background-color: #FFFFFF; -fx-border-color: #323232; -fx-border-width: 0px;" />
+                   
+                </VBox>
+                <VBox fx:id="div_main_left" alignment="CENTER" spacing="0" HBox.hgrow="ALWAYS" prefWidth="${div_main.width/2}">
+                    <ImageView fx:id="category_image" fitWidth="${div_main_content.width/2}" preserveRatio="true" pickOnBounds="true">
+                        <image>
+                            <Image url="@../images/cider.png"/>
+                        </image>
+                    </ImageView>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="40.0" right="40.0" top="20.0"/>
+    </padding>
+</VBox>
