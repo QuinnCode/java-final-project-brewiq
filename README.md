@@ -19,11 +19,19 @@ Brew IQ is a graphical user interface that offers users a comprehensive platform
 **Cloning the Repository:**
 git clone https://github.com/QuinnCode/java-final-project-brewiq.git
 
-
+**Requirements**
+jdk ( 11 or higher )
+javafx sdk ( 21 or higher )
+internet access
 
 **Getting Started:**
 
-First, download the source code
+1.	clone the repository
+2.	navigate to the the repository in an IDE
+3.	set up the javafx environment
+4.	add the included sqlite jar file to the classpath
+5.	run App.java
+
 
 ## Age Verification
 
