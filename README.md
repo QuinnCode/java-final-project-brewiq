@@ -26,11 +26,11 @@ internet access
 
 **Getting Started:**
 
-1.	clone the repository
-2.	navigate to the the repository in an IDE
-3.	set up the javafx environment
-4.	add the included sqlite jar file to the classpath
-5.	run App.java
+1.	Clone the repository
+2.	Navigate to the the repository in an IDE
+3.	Set up the javafx environment
+4.	Add the included sqlite jar file to the classpath
+5.	Run App.java
 
 
 ## Age Verification
