@@ -11,7 +11,7 @@ public class SplashController {
 
     @FXML
     private void navToCategories() throws IOException {
-        App.setRoot("categories1");
+        App.setRoot("categories");
     }
 
     @FXML
